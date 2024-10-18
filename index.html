@@ -261,76 +261,8 @@
       <p class="absfont"> With the advent of AI data-centric and big data, data pipelines play a crucial role in devising robust and effective intelligent systems in different sectors, including medicine, security, surveillance, inspection, and quality control. Data pipelines allow machine learning systems to work more efficiently by streamlining and automating data flows and managing datasets and data lakes intelligently. Nowadays, data pipelines have moved from confined data preparation to broader contexts encompassing metadata, labels/annotations, model predictions, embeddings, images/video representations, and deployed systems confidence, to mention just a few. This research theme investigates projects addressing challenges raised in automated data pipelines, in these contexts, including data annotation scarcity, incremental learning, data imbalance, managing overhead resources, multi-modality, high-bandwidth, and effective model generalization. It will conduct system-motivated, cross-disciplinary research programs spanning from fundamental AI research to proof-of-concept systems. It will also design, prototype, test, and evaluate data pipeline paradigms supported by high-performance computing and real-time implementations. The research programs will head towards application scenarios focusing on real-time security, health, and industrial use cases. This theme will also consolidate our collaboration with current and other potential industrial partners while providing opportunities for human capital development. 
               </p>
   </div>
-  <br><br>
-  <div class="container">
-      <h1>The Proposed Model</h1> <br> 
-      <div class="text-center">
-          <img class="img-fluid" src="mainFigure.png" style="max-width: 99%;" alt="...">
-        </div> <br><br> 
-      <p class="absfont">
-        
-This work introduces the CPLIP algorithm, which leverages unlabeled histology images and a pathology 
-prompt dictionary to fine-tune the CLIP model without any annotations. This adaptation aims to enhance 
-CLIP's performance across diverse histology data, enabling transfer learning for different pathology tasks. <br>
-<br>       
-In computational pathology, VL models have evolved from being novel to indispensable, 
-        allowing fine-tuning on smaller datasets compared to VL pretraining. However, the scarcity 
-        of Whole Slide Images (WSIs) and 
-        diverse cancer morphologies presents challenges for zero-shot transfer tasks, such as 
-        patch-based tissue recognition and WSI-level cancer subtyping. Despite this, VL models 
-        have been successfully deployed in classifying and analyzing WSIs, revolutionizing computational pathology.
-
-        Textual prompts are crucial for improving VL model performance, but their reliance on single phrases 
-        for each histology image may limit zero-shot classification effectiveness. Introducing richer, 
-        more detailed prompts could broaden VL models' understanding of various cancer types.
-        
-        Currently, existing histology VL models do not incorporate diverse textual prompts 
-        during training or at the inference stage. Unlike existing methods focusing on aligning 
-        individual textual and visual concepts, our approach proposes simultaneous alignment of 
-        numerous interrelated textual and visual concepts.
-      </p>
-  </div>
-  <br>
-  <div class="container" id="dataset">
-      <h1>Dictionary</h1> <br>
-      <p class="absfont">
-
-        The ARCH dataset, the main source of histology image-caption pairs, has limitations as it requires 
-        paired data. To overcome this, we propose a pathology prompt dictionary to extract comprehensive 
-        image-text descriptions.
-        <br><br>
-    Our dictionary, curated from reputable cancer glossaries<sup>
-        <a href="https://lab-ally.com/histopathology-resources/histopathology-glossary/" target="_blank">1</a> & 
-        <a href="https://www.cancer.org/cancer/understanding-cancer/glossary.html" target="_blank">2</a>
-    </sup>, covers a wide range of cancer types and morphologies.
-    <br><br>
-    <!-- Link to trigger popup -->
-    <a href="#" onclick="showJsonPopup(event)">View JSON Data</a>
-    <br><br>
-We compared it with another vocabulary, refining it to include 700 terms related specifically to histopathology.
- The refined dictionary aims to aid diagnosis by providing succinct prompts for major cancer types and
-  morphologies.  
-    </p>
-  </div>
-      <!-- <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NklNJ2Z4wMM" allowfullscreen></iframe>
-      </div> -->
-      <br> 
-      <div class="container" id="result">
-      <h1>Results</h1> <br>
-      <p class="absfont">  A comparative assessment of zero-shot classification performance is conducted, contrasting the novel CPLIP algorithm with state-of-the-art methods including 
-        <a href="https://ar5iv.labs.arxiv.org/html/2303.00915" target="_blank">BiomedCLIP</a>, 
-        <a href="https://www.nature.com/articles/s41591-023-02504-3" target="_blank">PLIP</a>, 
-        and 
-        <a href="https://arxiv.org/abs/2306.07831" target="_blank">MI-Zero</a>. 
-        The analysis, based on weighted F1 scores, illustrates CPLIP's significant performance improvements across six distinct histology datasets.  
-        <br> <br></p>
-      </div>
-
-      <div class="text-center">
-          <img class="img-fluid" src="intro_accuracy_comparison-1.jpg" style="max-width: 50%" alt="...">
-        </div> <br><br> 
-
+ 
+      
   
   
   <!-- <div class="container" id="author">
